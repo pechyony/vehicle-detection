@@ -1,6 +1,10 @@
 # lane-detection
 Project 5 in Udacity self-driving car nanodegree: vehicle detection and tracking
 
+[![simulator test test](examples/test_screenshot.png)](https://www.youtube.com/watch?v=4OgLSbtG8QM)  
+
+Description of our implementation is available [here](writeup.md).
+
 ## Setup
 
 Follow instructions [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/doc/configure_via_anaconda.md) to set up Anaconda environment. You can verify that your environment is set up correctly using the instructions [here](https://github.com/udacity/CarND-Term1-Starter-Kit-Test).
