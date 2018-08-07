@@ -89,9 +89,9 @@ The image below shows all overlapping 96x96 search windows in the original image
 
 ![alt text][image3]
 
-Since in the scaled image the windows are slided with the step of 2 cells x 8 pixels = 16 pixels, in the original image the sliding step is 16/64*96=24 pixels. This is exactly the distance between two successive parallel blue lines in the above image. To speed up a sliding window search I searched over the road area of the image, which has y-coornate between 400 and 650. 
+Since in the scaled image the windows are slided with the step of 2 cells x 8 pixels = 16 pixels, in the original image the sliding step is 16/64\*96=24 pixels. This is exactly the distance between two successive parallel blue lines in the above image. To speed up a sliding window search I searched over the road area of the image, which has y-coordinate between 400 and 650. 
 
-I used HOG subsampling to speed up the computation of HOG features for multiple search windows. HOG subsampling ensures that the HOG features of each block (which is a 2x2 array of cells, i.e. 16x16 pixels) in the original image are computed only once. Initially HOG features are precomputed for each block of the entire image. Then the values of the HOG features for a search window are taken from the precomputed values of HOG features of the blocks that are inside it.
+I used HOG subsampling to speed up the computation of HOG features for multiple search windows. HOG subsampling ensures that the HOG features of each block (which is a 2x2 array of cells, i.e. 16x16 pixels) in the scaled image are computed only once. Initially HOG features are precomputed for each block of the entire scaled image. Then the values of the HOG features for a search window are taken from the precomputed values of HOG features of the blocks that are inside it.
 
 I classified each search window using Linear SVM model described in the previous chapter. For each positively classified window I stored its raw score, gived by `decision_function()` function of lienar SVM. This raw score indicates how strong is the car detection. This score is leveraged when processing video streams. 
 
