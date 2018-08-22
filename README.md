@@ -1,4 +1,4 @@
-# lane-detection
+# Vehicle Detection
 Project 5 in Udacity self-driving car nanodegree: vehicle detection and tracking
 
 [![simulator test test](examples/test_screenshot.png)](https://www.youtube.com/watch?v=4OgLSbtG8QM)  
